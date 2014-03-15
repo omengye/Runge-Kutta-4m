@@ -12,7 +12,7 @@ vector<double> rk4_1st(double(*f)(double, double), const double ti, const double
 	xf.push_back(xi);
 	double k1, k2, k3, k4;
 	
-	vector<double> step_t = steps(ti, step, tf); //将时间t用linspace.h中step函数等分
+	vector<double> step_t = steps(ti, step, tf); // 灏嗘椂闂磘鐢╨inspace.h涓璼tep鍑芥暟绛夊垎
 	
 	for (size_t i=0; i != step_t.size(); ++i) {
 		k1 = step*f(step_t[i], xf[i]);

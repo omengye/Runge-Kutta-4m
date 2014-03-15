@@ -13,10 +13,10 @@ double f(double t, double x) {
 }
 
 /*
-ti    Ê±¼ä³õÖµ
-step  ²½³¤
-tf    Ê±¼ä½áÊø
-xi    ³õÖµ
+ti    æ—¶é—´åˆå€¼
+step  æ­¥é•¿
+tf    æ—¶é—´ç»“æŸ
+xi    åˆå€¼
 */
 
 int main() {

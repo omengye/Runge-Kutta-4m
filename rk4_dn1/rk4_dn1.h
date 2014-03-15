@@ -10,20 +10,19 @@ using std::vector;
 vector< vector<double> > rk4_dn1( vector<double>(*dnx)(double, vector<double>),
 		const double ti, const double step, const double tf, const vector<double> xi) {
 
-	vector<double> step_t = steps(ti, step, tf); // ½«Ê±¼ätÓÃlinspace.hÖĞstepº¯ÊıµÈ·Ö
-	vector< vector<double> > xf;                 // ½á¹û
+	vector<double> step_t = steps(ti, step, tf); // å°†æ—¶é—´tç”¨linspace.hä¸­çš„stepå‡½æ•°ç­‰åˆ†
+	vector< vector<double> > xf;                 // ç»“æœ
 
-	const int n = xi.size();                     // ÅĞ¶Ï·½³Ì×éÎ¬Êı
-
-	for (size_t i=0; i != n; ++i) {              // ·ÖÎªnĞĞ²¢¸³³õÖµ
+	const int n = xi.size();                     // åˆ¤æ–­æ–¹ç¨‹ç»„ç»´æ•°
+	for (size_t i=0; i != n; ++i) {              // åˆ†ä¸ºnè¡Œå¹¶èµ‹åˆå€¼
 		xf.push_back( vector<double>() );
 		xf[i].push_back(xi[i]);
 	}
 	
-	vector<double> x(n,0.0), dx(n,0.0), k1(n,0.0), k2(n,0.0), k3(n,0.0), k4(n,0.0), step_xf(n,0.0); // ³õÊ¼»¯
+	vector<double> x(n,0.0), dx(n,0.0), k1(n,0.0), k2(n,0.0), k3(n,0.0), k4(n,0.0), step_xf(n,0.0); // åˆå§‹åŒ–
 	step_xf=xi;
 
-	for (size_t i=0; i+1 != step_t.size(); ++i) {             // step_xf×÷ÖĞ¼äÖµÌî³äxf
+	for (size_t i=0; i+1 != step_t.size(); ++i) {             // step_xfä½œä¸­é—´å€¼å¡«å……xf
 		
 		// k1
 		dx = dnx(step_t[i], step_xf);

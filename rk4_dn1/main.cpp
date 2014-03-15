@@ -13,7 +13,7 @@ const double rad = 3.1415926/180.0;  // radians
 
 vector<double> dnx(double t, vector<double> x) {
 
-	vector<double> dx(4,0.0); // ³õÊ¼»¯
+	vector<double> dx(4,0.0); // åˆå§‹åŒ–
 	dx[0] = x[2];
 	dx[1] = x[3];
 	dx[2] = 0.0;
@@ -30,7 +30,7 @@ int main()
     double v0 = 180.0;              // initial speed (m/s)
     double a0 =  45.0;              // initial angle (degrees)
 
-    vector<double> xi(4,0.0);         // ³õÊ¼»¯³õÖµ
+    vector<double> xi(4,0.0);         // åˆå§‹åŒ–åˆå€¼
 
     xi[0] = 0.0;             // initial position in x (m)
     xi[1] = 0.0;             // initial position in y (m)

@@ -11,20 +11,20 @@ vector< vector<double> > rk4_2nd(double(*d1x)(double, double, double), double(*d
                const double ti, const double step, const double tf, const double xi,const  double vi) {
       
 /*   
-	·ÖÎªÁ½ĞĞ, 
+	åˆ†ä¸ºä¸¤è¡Œ, 
 	"Multi-dimensional vector", "http://stackoverflow.com/questions/823562/multi-dimensional-vector" 
-     "multidimensional vector, how to", "http://www.cplusplus.com/forum/general/833/"
+    "multidimensional vector, how to", "http://www.cplusplus.com/forum/general/833/"
 */
 	
-	vector< vector<double> >  xv_f;            // Á½ĞĞ
+	vector< vector<double> >  xv_f;            // ä¸¤è¡Œ
 	for (int i = 0; i < 2; i++) {
 		xv_f.push_back(vector<double>());       // Add an empty row
 	}
 	
-	vector<double> step_t = steps(ti, step, tf); //½«Ê±¼ätÓÃlinspace.hÖĞstepº¯ÊıµÈ·Ö
+	vector<double> step_t = steps(ti, step, tf); // å°†æ—¶é—´tç”¨linspace.hä¸­stepå‡½æ•°ç­‰åˆ†
 	double k1x,k2x,k3x,k4x,k1v,k2v,k3v,k4v;
 	
-	xv_f[0].push_back(xi); // ¸³³õÖµ
+	xv_f[0].push_back(xi); // èµ‹åˆå€¼
 	xv_f[1].push_back(vi);
 
 	for (size_t i=0; i+1 != step_t.size(); ++i) {
