@@ -31,7 +31,7 @@ int main()
 
     ti = 0.0;             // initial value for variable
     dt = 0.1;             // step size for integration
-    tmax = 1.0;           // integrate from ti till tmax
+    tmax = 1.0;          // integrate from ti till tmax
 	xi = 0.0;             // initial value for function x(t)
     vi = 1.0;             // initial
 
